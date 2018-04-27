@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AccessoryViewState: Int {
+public enum AccessoryViewState: Int {
     case error
     case success
     case defaults
@@ -23,24 +23,24 @@ enum AccessoryViewState: Int {
     }
 }
 
-typealias DrawingHandler = (_ view: TextFieldAccessoryView) -> Void
+public typealias DrawingHandler = (_ view: TextFieldAccessoryView) -> Void
 
-public class TextFieldAccessoryView: UIView {
+open class TextFieldAccessoryView: UIView {
     
-    @IBInspectable var errorStateColor: UIColor = UIColor.red
-    @IBInspectable var successStateColor: UIColor = UIColor.green
-    @IBInspectable var defaultStateColor: UIColor = UIColor.lightGray
-    @IBInspectable var activeStateColor: UIColor = UIColor.darkGray
+    @IBInspectable open var errorStateColor: UIColor = UIColor.red
+    @IBInspectable open var successStateColor: UIColor = UIColor.green
+    @IBInspectable open var defaultStateColor: UIColor = UIColor.lightGray
+    @IBInspectable open var activeStateColor: UIColor = UIColor.darkGray
     
-    var drawing: DrawingHandler?
+    open var drawing: DrawingHandler?
     
-    var currentViewState: AccessoryViewState = .defaults {
+    open var currentViewState: AccessoryViewState = .defaults {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    func currentStateColor() -> UIColor {
+    open func currentStateColor() -> UIColor {
         switch currentViewState {
         case .error   : return errorStateColor
         case .success : return successStateColor
@@ -49,7 +49,7 @@ public class TextFieldAccessoryView: UIView {
         }
     }
 
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         if let drawingHandler = drawing {
             drawingHandler(self)

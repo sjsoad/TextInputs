@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class EmailTextField: BaseTextField {
+open class EmailTextField: BaseTextField {
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -9,7 +9,7 @@
 import UIKit
 import SKPickerViewManager
 
-public class PickerViewField: ToolbarTextField {
+open class PickerViewField: ToolbarTextField {
     
     // MARK: - Lazy -
     

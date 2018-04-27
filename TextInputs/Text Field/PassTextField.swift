@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PassTextField: BaseTextField {
+open class PassTextField: BaseTextField {
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

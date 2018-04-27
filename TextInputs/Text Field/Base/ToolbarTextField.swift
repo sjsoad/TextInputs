@@ -10,7 +10,7 @@ import UIKit
 
 public typealias ToolbarFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBarButtonItem) -> Void)
 
-public class ToolbarTextField: BaseTextField {
+open class ToolbarTextField: BaseTextField {
     
     private var doneButtonHandler: ToolbarFieldDoneButtonHandler?
     

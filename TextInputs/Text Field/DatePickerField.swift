@@ -10,7 +10,7 @@ import UIKit
 
 public typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker: UIDatePicker, _ date: Date) -> Void)
 
-public class DatePickerField: ToolbarTextField {
+open class DatePickerField: ToolbarTextField {
     
     private var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
     

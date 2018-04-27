@@ -10,7 +10,7 @@ import UIKit
 
 public typealias ToolbarTextViewDoneButtonHandler = ((_ textView: UITextView, _ sender: UIBarButtonItem) -> Void)
 
-public class ToolbarTextView: UITextView {
+open class ToolbarTextView: UITextView {
 
     private var doneButtonHandler: ToolbarTextViewDoneButtonHandler?
     

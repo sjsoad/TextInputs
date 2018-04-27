@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseTextField: UITextField {
+open class BaseTextField: UITextField {
     
     // MARK: - IBInspectable -
     
@@ -20,7 +20,7 @@ public class BaseTextField: UITextField {
     
     // MARK: - Public Override -
     
-    public override var placeholder: String? {
+    open override var placeholder: String? {
         didSet {
             updateAttributtedPlaceholder()
         }
@@ -28,7 +28,7 @@ public class BaseTextField: UITextField {
     
     // MARK: - Lifecyrcle -
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         updateAttributtedPlaceholder()
     }
