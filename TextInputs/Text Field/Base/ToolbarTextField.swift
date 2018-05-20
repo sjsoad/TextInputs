@@ -22,7 +22,7 @@ open class ToolbarTextField: BaseTextField {
     
     // MARK: - Lazy -
     
-    lazy var toolbar: UIToolbar = {
+    public private(set) lazy var toolbar: UIToolbar = {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.sizeToFit()

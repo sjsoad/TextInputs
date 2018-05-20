@@ -13,7 +13,7 @@ open class PickerViewField: ToolbarTextField {
     
     // MARK: - Lazy -
     
-    private(set) lazy var picker: UIPickerView = {
+    public private(set) lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         return picker
     }()
@@ -44,6 +44,10 @@ open class PickerViewField: ToolbarTextField {
     }
     
     private func selectRows(at indexPathes: [IndexPath]) {
+        guard !indexPathes.isEmpty else {
+            guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
+            picker.selectRow(0, inComponent: 0, animated: true)
+            return }
         for indexPath in indexPathes {
             guard indexPath.row >= 0, indexPath.section < picker.numberOfComponents,
                 indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
