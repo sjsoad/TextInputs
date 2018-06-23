@@ -10,7 +10,7 @@ import UIKit
 
 open class PassTextField: BaseTextField {
 
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         isSecureTextEntry = true
         autocorrectionType = .no

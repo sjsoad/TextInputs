@@ -14,7 +14,7 @@ open class ToolbarTextView: UITextView {
 
     private var doneButtonHandler: ToolbarTextViewDoneButtonHandler?
     
-    @IBInspectable private(set) var doneButtonTitle: String = "Done" {
+    @IBInspectable public private(set) var doneButtonTitle: String = "Done" {
         didSet {
             doneButton.title = doneButtonTitle
         }
@@ -39,14 +39,14 @@ open class ToolbarTextView: UITextView {
     
     // MARK: - Init -
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         inputAccessoryView = toolbar
     }
     
     // MARK: - Actions -
     
-    @objc func doneButtonPressed(_ sender: UIBarButtonItem) {
+    @objc private func doneButtonPressed(_ sender: UIBarButtonItem) {
         NotificationCenter.default.post(name: .UITextViewTextDidEndEditing, object: self)
         doneButtonHandler?(self, sender)
     }

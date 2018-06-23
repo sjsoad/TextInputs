@@ -25,14 +25,14 @@ open class DatePickerField: ToolbarTextField {
     
     // MARK: - Init -
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         inputView = datePicker
     }
     
     // MARK: - Actions -
     
-    override func doneButtonPressed(_ sender: UIBarButtonItem) {
+    internal override func doneButtonPressed(_ sender: UIBarButtonItem) {
         dateSelectionHandler?(self, datePicker, datePicker.date)
         super.doneButtonPressed(sender)
     }

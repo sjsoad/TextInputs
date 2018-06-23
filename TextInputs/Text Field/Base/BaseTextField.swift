@@ -12,7 +12,7 @@ open class BaseTextField: UITextField {
     
     // MARK: - IBInspectable -
     
-    @IBInspectable private(set) var placeholderColor: UIColor? {
+    @IBInspectable public private(set) var placeholderColor: UIColor? {
         didSet {
             updateAttributtedPlaceholder()
         }

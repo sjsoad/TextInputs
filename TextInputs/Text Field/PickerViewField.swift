@@ -20,14 +20,14 @@ open class PickerViewField: ToolbarTextField {
     
     // MARK: - Init -
     
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         inputView = picker
     }
     
     // MARK: - Actions -
     
-    override func doneButtonPressed(_ sender: UIBarButtonItem) {
+    internal override func doneButtonPressed(_ sender: UIBarButtonItem) {
         for componentIndex in 0..<picker.numberOfComponents {
             let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
             if let delegate = picker.delegate {
