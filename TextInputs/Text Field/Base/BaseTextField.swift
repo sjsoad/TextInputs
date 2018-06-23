@@ -20,7 +20,7 @@ open class BaseTextField: UITextField {
     
     // MARK: - Public Override -
     
-    open override var placeholder: String? {
+    override open var placeholder: String? {
         didSet {
             updateAttributtedPlaceholder()
         }
@@ -28,7 +28,7 @@ open class BaseTextField: UITextField {
     
     // MARK: - Lifecyrcle -
     
-    open override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         updateAttributtedPlaceholder()
     }

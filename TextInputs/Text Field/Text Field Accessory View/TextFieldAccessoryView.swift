@@ -49,7 +49,7 @@ open class TextFieldAccessoryView: UIView {
         }
     }
 
-    open override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         if let drawingHandler = drawing {
             drawingHandler(self)
