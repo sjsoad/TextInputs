@@ -19,7 +19,6 @@ open class DatePickerField: ToolbarTextField {
     public private(set) lazy var datePicker: UIDatePicker = { [unowned self] in
         let datePicker = UIDatePicker()
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        
         return datePicker
     }()
     
