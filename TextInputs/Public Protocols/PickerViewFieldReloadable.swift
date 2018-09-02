@@ -13,5 +13,3 @@ public protocol PickerViewFieldReloadable {
     func reload(with manager: PickerManager)
     func select(_ row: Int, inComponent component: Int)
 }
-
-

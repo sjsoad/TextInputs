@@ -33,7 +33,7 @@ open class BaseTextField: UITextField {
     
     private func updateAttributtedPlaceholder() {
         guard let text = placeholder, let color = placeholderColor else { return }
-        attributedPlaceholder = NSAttributedString(string: text, attributes:[.foregroundColor: color])
+        attributedPlaceholder = NSAttributedString(string: text, attributes: [.foregroundColor: color])
     }
     
 }
