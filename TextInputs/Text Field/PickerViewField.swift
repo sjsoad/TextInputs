@@ -27,29 +27,29 @@ open class PickerViewField: ToolbarTextField {
     // MARK: - Actions -
     
     internal override func doneButtonPressed(_ sender: UIBarButtonItem) {
-        for componentIndex in 0..<picker.numberOfComponents {
-            let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
-            if let delegate = picker.delegate {
-                delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
-            }
-        }
+//        for componentIndex in 0..<picker.numberOfComponents {
+//            let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
+//            if let delegate = picker.delegate {
+//                delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
+//            }
+//        }
         super.doneButtonPressed(sender)
     }
     
     // MARK: - Private -
     
-    private func selectRows(at indexPathes: [IndexPath]) {
-        guard !indexPathes.isEmpty else {
-            guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
-            picker.selectRow(0, inComponent: 0, animated: true)
-            return }
-        for indexPath in indexPathes {
-            guard indexPath.row >= 0, indexPath.section < picker.numberOfComponents,
-                indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
-            picker.selectRow(indexPath.row, inComponent: indexPath.section, animated: true)
-            picker.delegate?.pickerView?(picker, didSelectRow: indexPath.row, inComponent: indexPath.section)
-        }
-    }
+//    private func selectRows(at indexPathes: [IndexPath]) {
+//        guard !indexPathes.isEmpty else {
+//            guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
+//            picker.selectRow(0, inComponent: 0, animated: true)
+//            return }
+//        for indexPath in indexPathes {
+//            guard indexPath.row >= 0, indexPath.section < picker.numberOfComponents,
+//                indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
+//            picker.selectRow(indexPath.row, inComponent: indexPath.section, animated: true)
+//            picker.delegate?.pickerView?(picker, didSelectRow: indexPath.row, inComponent: indexPath.section)
+//        }
+//    }
     
 }
 
@@ -61,10 +61,10 @@ extension PickerViewField: PickerViewFieldReloadable {
         picker.dataSource = manager
         picker.delegate = manager
         picker.reloadAllComponents()
-        selectRows(at: manager.selectedIndexes)
-        manager.selectionSettingHandler = { [weak self] (selectedIndicies) in
-            self?.selectRows(at: selectedIndicies)
-        }
+//        selectRows(at: manager.selectedIndexes)
+//        manager.selectionSettingHandler = { [weak self] (selectedIndicies) in
+//            self?.selectRows(at: selectedIndicies)
+//        }
     }
     
 }
