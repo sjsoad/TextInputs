@@ -11,5 +11,4 @@ import SKPickerViewManager
 public protocol PickerViewFieldReloadable {
     
     func reload(with manager: PickerManager)
-
 }

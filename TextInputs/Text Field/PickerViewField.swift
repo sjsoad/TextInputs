@@ -9,7 +9,7 @@
 import UIKit
 import SKPickerViewManager
 
-open class PickerViewField: ToolbarTextField {
+open class PickerViewField: ToolbarTextField, PickerViewFieldReloadable {
     
     // MARK: - Lazy -
     
@@ -24,20 +24,16 @@ open class PickerViewField: ToolbarTextField {
         inputView = picker
     }
     
-    // MARK: - Actions -
+    // MARK: - PickerViewFieldReloadable -
     
-    internal override func doneButtonPressed(_ sender: UIBarButtonItem) {
-//        for componentIndex in 0..<picker.numberOfComponents {
-//            let selectedRowIndex = picker.selectedRow(inComponent: componentIndex)
-//            if let delegate = picker.delegate {
-//                delegate.pickerView?(picker, didSelectRow: selectedRowIndex, inComponent: componentIndex)
-//            }
-//        }
-        super.doneButtonPressed(sender)
+    public func reload(with manager: PickerManager) {
+        picker.dataSource = manager
+        picker.delegate = manager
+        picker.reloadAllComponents()
     }
     
-    // MARK: - Private -
-    
+//    // MARK: - Private -
+//
 //    private func selectRows(at indexPathes: [IndexPath]) {
 //        guard !indexPathes.isEmpty else {
 //            guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
@@ -46,25 +42,7 @@ open class PickerViewField: ToolbarTextField {
 //        for indexPath in indexPathes {
 //            guard indexPath.row >= 0, indexPath.section < picker.numberOfComponents,
 //                indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
-//            picker.selectRow(indexPath.row, inComponent: indexPath.section, animated: true)
-//            picker.delegate?.pickerView?(picker, didSelectRow: indexPath.row, inComponent: indexPath.section)
 //        }
 //    }
-    
-}
-
-// MARK: - PickerViewFieldReloading -
-
-extension PickerViewField: PickerViewFieldReloadable {
-    
-    public func reload(with manager: PickerManager) {
-        picker.dataSource = manager
-        picker.delegate = manager
-        picker.reloadAllComponents()
-//        selectRows(at: manager.selectedIndexes)
-//        manager.selectionSettingHandler = { [weak self] (selectedIndicies) in
-//            self?.selectRows(at: selectedIndicies)
-//        }
-    }
     
 }

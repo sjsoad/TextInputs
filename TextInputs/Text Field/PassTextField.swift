@@ -13,8 +13,8 @@ open class PassTextField: BaseTextField {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         isSecureTextEntry = true
-        autocorrectionType = .no
-        autocapitalizationType = .none
+        guard #available(iOS 11, *) else { return }
+        textContentType = .password
     }
     
 }

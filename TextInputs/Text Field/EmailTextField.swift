@@ -13,6 +13,7 @@ open class EmailTextField: BaseTextField {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         keyboardType = .emailAddress
+        textContentType = .emailAddress
     }
     
 }

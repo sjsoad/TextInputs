@@ -25,13 +25,6 @@ open class DatePickerField: ToolbarTextField, DateSelectionHandlerSettable {
         inputView = datePicker
     }
     
-    // MARK: - Actions -
-    
-    internal override func doneButtonPressed(_ sender: UIBarButtonItem) {
-        dateSelectionHandler?(self, datePicker, datePicker.date)
-        super.doneButtonPressed(sender)
-    }
-    
     // MARK: - Private -
     
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
