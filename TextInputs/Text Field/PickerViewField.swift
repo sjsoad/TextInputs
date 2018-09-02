@@ -10,7 +10,7 @@ import UIKit
 import SKPickerViewManager
 
 open class PickerViewField: ToolbarTextField, PickerViewFieldReloadable {
-    
+
     // MARK: - Lazy -
     
     public private(set) lazy var picker: UIPickerView = {
@@ -32,17 +32,10 @@ open class PickerViewField: ToolbarTextField, PickerViewFieldReloadable {
         picker.reloadAllComponents()
     }
     
-//    // MARK: - Private -
-//
-//    private func selectRows(at indexPathes: [IndexPath]) {
-//        guard !indexPathes.isEmpty else {
-//            guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
-//            picker.selectRow(0, inComponent: 0, animated: true)
-//            return }
-//        for indexPath in indexPathes {
-//            guard indexPath.row >= 0, indexPath.section < picker.numberOfComponents,
-//                indexPath.row < picker.numberOfRows(inComponent: indexPath.section) else { return }
-//        }
-//    }
-    
+    public func select(_ row: Int, inComponent component: Int) {
+        guard picker.contains(row, inComponent: component) else { return }
+        picker.selectRow(row, inComponent: component, animated: true)
+        picker.delegate?.pickerView?(picker, didSelectRow: row, inComponent: component)
+    }
+
 }

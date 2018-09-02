@@ -12,6 +12,7 @@ extension UIToolbar {
     convenience init(with buttons: [UIBarButtonItem]) {
         self.init()
         self.setItems(buttons, animated: false)
+        self.sizeToFit()
     }
     
 }

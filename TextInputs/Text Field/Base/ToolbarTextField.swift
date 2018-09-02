@@ -10,7 +10,7 @@ import UIKit
 
 open class ToolbarTextField: BaseTextField, DoneTitleSettable, DoneButtonHandlerSettable {
     
-    public var doneButtonHandler: ToolbarDoneButtonHandler<UITextField>?
+    public var doneButtonHandler: ToolbarDoneButtonHandler<ToolbarTextField>?
     
     @IBInspectable public var doneButtonTitle: String = "Done" {
         didSet { doneButton.title = doneButtonTitle }
