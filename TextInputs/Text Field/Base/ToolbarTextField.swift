@@ -8,34 +8,23 @@
 
 import UIKit
 
-public typealias ToolbarFieldDoneButtonHandler = ((_ field: UITextField, _ sender: UIBarButtonItem) -> Void)
-
-open class ToolbarTextField: BaseTextField {
+open class ToolbarTextField: BaseTextField, DoneTitleSettable, DoneButtonHandlerSettable {
     
-    private var doneButtonHandler: ToolbarFieldDoneButtonHandler?
+    public var doneButtonHandler: ToolbarDoneButtonHandler<UITextField>?
     
-    @IBInspectable private(set) var doneButtonTitle: String = "Done" {
-        didSet {
-            doneButton.title = doneButtonTitle
-        }
+    @IBInspectable public var doneButtonTitle: String = "Done" {
+        didSet { doneButton.title = doneButtonTitle }
     }
     
     // MARK: - Lazy -
     
     public private(set) lazy var toolbar: UIToolbar = {
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        return toolBar
+        return UIToolbar(with: [UIBarButtonItem.flexibleSpaceButton(), doneButton])
     }()
     
     private lazy var doneButton: UIBarButtonItem = { [unowned self] in
-        let doneButton = UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
-        return doneButton
-    }()
+        return UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
+        }()
     
     // MARK: - Init -
     
@@ -51,23 +40,4 @@ open class ToolbarTextField: BaseTextField {
         doneButtonHandler?(self, sender)
     }
     
-}
-
-// MARK: - DoneTitleSetting -
-
-extension ToolbarTextField: DoneTitleSetting {
-    
-    public func set(doneTitle title: String) {
-        doneButtonTitle = title
-    }
-    
-}
-
-// MARK: - DoneButtonHandlerSetting -
-
-extension ToolbarTextField: DoneButtonHandlerSetting {
-    
-    public func set(doneButtonHandler handler: @escaping ToolbarFieldDoneButtonHandler) {
-        doneButtonHandler = handler
-    }
 }

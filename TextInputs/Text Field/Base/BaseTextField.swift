@@ -13,17 +13,13 @@ open class BaseTextField: UITextField {
     // MARK: - IBInspectable -
     
     @IBInspectable public private(set) var placeholderColor: UIColor? {
-        didSet {
-            updateAttributtedPlaceholder()
-        }
+        didSet { updateAttributtedPlaceholder() }
     }
     
     // MARK: - Public Override -
     
     override open var placeholder: String? {
-        didSet {
-            updateAttributtedPlaceholder()
-        }
+        didSet { updateAttributtedPlaceholder() }
     }
     
     // MARK: - Lifecyrcle -
@@ -37,8 +33,7 @@ open class BaseTextField: UITextField {
     
     private func updateAttributtedPlaceholder() {
         guard let text = placeholder, let color = placeholderColor else { return }
-        attributedPlaceholder = NSAttributedString(string: text,
-                                                   attributes:[.foregroundColor: color])
+        attributedPlaceholder = NSAttributedString(string: text, attributes:[.foregroundColor: color])
     }
     
 }

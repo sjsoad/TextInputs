@@ -8,33 +8,22 @@
 
 import UIKit
 
-public typealias ToolbarTextViewDoneButtonHandler = ((_ textView: UITextView, _ sender: UIBarButtonItem) -> Void)
+open class ToolbarTextView: UITextView, DoneTitleSettable, DoneButtonHandlerSettable {
 
-open class ToolbarTextView: UITextView {
-
-    private var doneButtonHandler: ToolbarTextViewDoneButtonHandler?
+    public var doneButtonHandler: ToolbarDoneButtonHandler<UITextView>?
     
-    @IBInspectable public private(set) var doneButtonTitle: String = "Done" {
-        didSet {
-            doneButton.title = doneButtonTitle
-        }
+    @IBInspectable public var doneButtonTitle: String = "Done" {
+        didSet { doneButton.title = doneButtonTitle }
     }
     
     // MARK: - Lazy -
     
     public private(set) lazy var toolbar: UIToolbar = {
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.sizeToFit()
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        return toolBar
+        return UIToolbar(with: [UIBarButtonItem.flexibleSpaceButton(), doneButton])
     }()
     
     private lazy var doneButton: UIBarButtonItem = { [unowned self] in
-        let doneButton = UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
-        return doneButton
+        return UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
         }()
     
     // MARK: - Init -
@@ -51,23 +40,4 @@ open class ToolbarTextView: UITextView {
         doneButtonHandler?(self, sender)
     }
     
-}
-
-// MARK: - DoneTitleSetting -
-
-extension ToolbarTextView: DoneTitleSetting {
-    
-    public func set(doneTitle title: String) {
-        doneButtonTitle = title
-    }
-    
-}
-
-// MARK: - DoneButtonHandlerSetting -
-
-extension ToolbarTextView: DoneButtonHandlerSetting {
-    
-    public func set(doneButtonHandler handler: @escaping ToolbarTextViewDoneButtonHandler) {
-        doneButtonHandler = handler
-    }
 }

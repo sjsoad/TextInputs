@@ -14,8 +14,7 @@ open class PickerViewField: ToolbarTextField {
     // MARK: - Lazy -
     
     public private(set) lazy var picker: UIPickerView = {
-        let picker = UIPickerView()
-        return picker
+        return UIPickerView()
     }()
     
     // MARK: - Init -
@@ -39,10 +38,6 @@ open class PickerViewField: ToolbarTextField {
     
     // MARK: - Private -
     
-    private func reloadPicker() {
-        picker.reloadAllComponents()
-    }
-    
     private func selectRows(at indexPathes: [IndexPath]) {
         guard !indexPathes.isEmpty else {
             guard picker.numberOfComponents > 0, picker.numberOfRows(inComponent: 0) > 0 else { return }
@@ -60,12 +55,12 @@ open class PickerViewField: ToolbarTextField {
 
 // MARK: - PickerViewFieldReloading -
 
-extension PickerViewField: PickerViewFieldReloading {
+extension PickerViewField: PickerViewFieldReloadable {
     
     public func reload(with manager: PickerManager) {
         picker.dataSource = manager
         picker.delegate = manager
-        reloadPicker()
+        picker.reloadAllComponents()
         selectRows(at: manager.selectedIndexes)
         manager.selectionSettingHandler = { [weak self] (selectedIndicies) in
             self?.selectRows(at: selectedIndicies)

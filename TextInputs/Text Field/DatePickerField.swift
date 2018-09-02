@@ -8,18 +8,14 @@
 
 import UIKit
 
-public typealias DatePickerFieldDateSelectionHandler = ((_ field: UITextField, _ picker: UIDatePicker, _ date: Date) -> Void)
-
-open class DatePickerField: ToolbarTextField {
+open class DatePickerField: ToolbarTextField, DateSelectionHandlerSettable {
     
-    private var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
+    public var dateSelectionHandler: DatePickerFieldDateSelectionHandler?
     
     // MARK: - Lazy -
     
     public private(set) lazy var datePicker: UIDatePicker = { [unowned self] in
-        let datePicker = UIDatePicker()
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        return datePicker
+        return UIDatePicker(target: self, valueChangeHandler: #selector(datePickerValueChanged(_:)))
     }()
     
     // MARK: - Init -
@@ -40,14 +36,6 @@ open class DatePickerField: ToolbarTextField {
     
     @objc private func datePickerValueChanged(_ sender: UIDatePicker) {
         dateSelectionHandler?(self, sender, sender.date)
-    }
-    
-}
-
-extension DatePickerField: DateSelectionHandlerSetting {
-    
-    public func set(dateSelectionHandler handler: @escaping DatePickerFieldDateSelectionHandler) {
-        dateSelectionHandler = handler
     }
     
 }
