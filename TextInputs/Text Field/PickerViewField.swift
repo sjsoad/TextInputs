@@ -13,9 +13,7 @@ open class PickerViewField: ToolbarTextField, PickerViewFieldReloadable {
 
     // MARK: - Lazy -
     
-    public private(set) lazy var picker: UIPickerView = {
-        return UIPickerView()
-    }()
+    public private(set) lazy var picker: UIPickerView = UIPickerView()
     
     // MARK: - Init -
     

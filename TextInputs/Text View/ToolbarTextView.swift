@@ -18,9 +18,7 @@ open class ToolbarTextView: UITextView, DoneTitleSettable, DoneButtonHandlerSett
     
     // MARK: - Lazy -
     
-    public private(set) lazy var toolbar: UIToolbar = {
-        return UIToolbar(with: [UIBarButtonItem.flexibleSpaceButton(), doneButton])
-    }()
+    public private(set) lazy var toolbar: UIToolbar = UIToolbar(with: [UIBarButtonItem.flexibleSpaceButton(), doneButton])
     
     private lazy var doneButton: UIBarButtonItem = { [unowned self] in
         return UIBarButtonItem(title: doneButtonTitle, style: .plain, target: self, action: #selector(doneButtonPressed(_:)))
