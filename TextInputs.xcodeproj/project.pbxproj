@@ -8,32 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		A5123F58208CFAC300717916 /* PickerViewManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5123F57208CFAC300717916 /* PickerViewManager.framework */; };
+		A52B988A2148E06500491FA3 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98762148E06500491FA3 /* UIBarButtonItem.swift */; };
+		A52B988B2148E06500491FA3 /* UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98772148E06500491FA3 /* UIDatePicker.swift */; };
+		A52B988C2148E06500491FA3 /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98782148E06500491FA3 /* UIPickerView.swift */; };
+		A52B988D2148E06500491FA3 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98792148E06500491FA3 /* UIToolbar.swift */; };
+		A52B988E2148E06500491FA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B987A2148E06500491FA3 /* Constants.swift */; };
+		A52B988F2148E06500491FA3 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B987C2148E06500491FA3 /* DatePickerField.swift */; };
+		A52B98902148E06500491FA3 /* PickerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B987D2148E06500491FA3 /* PickerViewField.swift */; };
+		A52B98912148E06500491FA3 /* PassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B987E2148E06500491FA3 /* PassTextField.swift */; };
+		A52B98922148E06500491FA3 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B987F2148E06500491FA3 /* EmailTextField.swift */; };
+		A52B98932148E06500491FA3 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98812148E06500491FA3 /* BaseTextField.swift */; };
+		A52B98942148E06500491FA3 /* ToolbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98822148E06500491FA3 /* ToolbarTextField.swift */; };
+		A52B98952148E06500491FA3 /* ToolbarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98842148E06500491FA3 /* ToolbarTextView.swift */; };
+		A52B98962148E06500491FA3 /* DoneButtonHandlerSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98862148E06500491FA3 /* DoneButtonHandlerSettable.swift */; };
+		A52B98972148E06500491FA3 /* PickerViewFieldReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98872148E06500491FA3 /* PickerViewFieldReloadable.swift */; };
+		A52B98982148E06500491FA3 /* DateSelectionHandlerSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98882148E06500491FA3 /* DateSelectionHandlerSettable.swift */; };
+		A52B98992148E06500491FA3 /* DoneTitleSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52B98892148E06500491FA3 /* DoneTitleSettable.swift */; };
 		A57EE3DA208CD0B200F45DA2 /* TextInputs.h in Headers */ = {isa = PBXBuildFile; fileRef = A57EE3D8208CD0B200F45DA2 /* TextInputs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A57EE3F0208CD0E500F45DA2 /* ToolbarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3E1208CD0E400F45DA2 /* ToolbarTextView.swift */; };
-		A57EE3F1208CD0E500F45DA2 /* TextInputsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3E3208CD0E500F45DA2 /* TextInputsProtocols.swift */; };
-		A57EE3F3208CD0E500F45DA2 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3E7208CD0E500F45DA2 /* DatePickerField.swift */; };
-		A57EE3F4208CD0E500F45DA2 /* TextFieldAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3E9208CD0E500F45DA2 /* TextFieldAccessoryView.swift */; };
-		A57EE3F5208CD0E500F45DA2 /* PickerViewField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3EA208CD0E500F45DA2 /* PickerViewField.swift */; };
-		A57EE3F6208CD0E500F45DA2 /* PassTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3EB208CD0E500F45DA2 /* PassTextField.swift */; };
-		A57EE3F7208CD0E500F45DA2 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3EC208CD0E500F45DA2 /* EmailTextField.swift */; };
-		A57EE3F8208CD0E500F45DA2 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3EE208CD0E500F45DA2 /* BaseTextField.swift */; };
-		A57EE3F9208CD0E500F45DA2 /* ToolbarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57EE3EF208CD0E500F45DA2 /* ToolbarTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5123F57208CFAC300717916 /* PickerViewManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PickerViewManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52B98762148E06500491FA3 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		A52B98772148E06500491FA3 /* UIDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDatePicker.swift; sourceTree = "<group>"; };
+		A52B98782148E06500491FA3 /* UIPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
+		A52B98792148E06500491FA3 /* UIToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
+		A52B987A2148E06500491FA3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A52B987C2148E06500491FA3 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
+		A52B987D2148E06500491FA3 /* PickerViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewField.swift; sourceTree = "<group>"; };
+		A52B987E2148E06500491FA3 /* PassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTextField.swift; sourceTree = "<group>"; };
+		A52B987F2148E06500491FA3 /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		A52B98812148E06500491FA3 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		A52B98822148E06500491FA3 /* ToolbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextField.swift; sourceTree = "<group>"; };
+		A52B98842148E06500491FA3 /* ToolbarTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextView.swift; sourceTree = "<group>"; };
+		A52B98862148E06500491FA3 /* DoneButtonHandlerSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneButtonHandlerSettable.swift; sourceTree = "<group>"; };
+		A52B98872148E06500491FA3 /* PickerViewFieldReloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewFieldReloadable.swift; sourceTree = "<group>"; };
+		A52B98882148E06500491FA3 /* DateSelectionHandlerSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectionHandlerSettable.swift; sourceTree = "<group>"; };
+		A52B98892148E06500491FA3 /* DoneTitleSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneTitleSettable.swift; sourceTree = "<group>"; };
 		A57EE3D5208CD0B200F45DA2 /* TextInputs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TextInputs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57EE3D8208CD0B200F45DA2 /* TextInputs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextInputs.h; sourceTree = "<group>"; };
-		A57EE3E1208CD0E400F45DA2 /* ToolbarTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextView.swift; sourceTree = "<group>"; };
-		A57EE3E3208CD0E500F45DA2 /* TextInputsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputsProtocols.swift; sourceTree = "<group>"; };
 		A57EE3E5208CD0E500F45DA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A57EE3E7208CD0E500F45DA2 /* DatePickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
-		A57EE3E9208CD0E500F45DA2 /* TextFieldAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAccessoryView.swift; sourceTree = "<group>"; };
-		A57EE3EA208CD0E500F45DA2 /* PickerViewField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewField.swift; sourceTree = "<group>"; };
-		A57EE3EB208CD0E500F45DA2 /* PassTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTextField.swift; sourceTree = "<group>"; };
-		A57EE3EC208CD0E500F45DA2 /* EmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
-		A57EE3EE208CD0E500F45DA2 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
-		A57EE3EF208CD0E500F45DA2 /* ToolbarTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolbarTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A52B98752148E06500491FA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A52B98762148E06500491FA3 /* UIBarButtonItem.swift */,
+				A52B98772148E06500491FA3 /* UIDatePicker.swift */,
+				A52B98782148E06500491FA3 /* UIPickerView.swift */,
+				A52B98792148E06500491FA3 /* UIToolbar.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A52B987B2148E06500491FA3 /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				A52B987C2148E06500491FA3 /* DatePickerField.swift */,
+				A52B987D2148E06500491FA3 /* PickerViewField.swift */,
+				A52B987E2148E06500491FA3 /* PassTextField.swift */,
+				A52B987F2148E06500491FA3 /* EmailTextField.swift */,
+				A52B98802148E06500491FA3 /* Base */,
+			);
+			path = "Text Field";
+			sourceTree = "<group>";
+		};
+		A52B98802148E06500491FA3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A52B98812148E06500491FA3 /* BaseTextField.swift */,
+				A52B98822148E06500491FA3 /* ToolbarTextField.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A52B98832148E06500491FA3 /* Text View */ = {
+			isa = PBXGroup;
+			children = (
+				A52B98842148E06500491FA3 /* ToolbarTextView.swift */,
+			);
+			path = "Text View";
+			sourceTree = "<group>";
+		};
+		A52B98852148E06500491FA3 /* Public Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A52B98862148E06500491FA3 /* DoneButtonHandlerSettable.swift */,
+				A52B98872148E06500491FA3 /* PickerViewFieldReloadable.swift */,
+				A52B98882148E06500491FA3 /* DateSelectionHandlerSettable.swift */,
+				A52B98892148E06500491FA3 /* DoneTitleSettable.swift */,
+			);
+			path = "Public Protocols";
+			sourceTree = "<group>";
+		};
 		A57EE3CB208CD0B200F45DA2 = {
 			isa = PBXGroup;
 			children = (
@@ -76,29 +141,15 @@
 		A57EE3D7208CD0B200F45DA2 /* TextInputs */ = {
 			isa = PBXGroup;
 			children = (
-				A57EE3E2208CD0E500F45DA2 /* Public Protocols */,
+				A52B987A2148E06500491FA3 /* Constants.swift */,
+				A52B98752148E06500491FA3 /* Extensions */,
+				A52B98852148E06500491FA3 /* Public Protocols */,
+				A52B987B2148E06500491FA3 /* Text Field */,
+				A52B98832148E06500491FA3 /* Text View */,
 				A57EE3E4208CD0E500F45DA2 /* Resources */,
-				A57EE3E6208CD0E500F45DA2 /* Text Field */,
-				A57EE3E0208CD0E400F45DA2 /* Text View */,
 				A57EE3D8208CD0B200F45DA2 /* TextInputs.h */,
 			);
 			path = TextInputs;
-			sourceTree = "<group>";
-		};
-		A57EE3E0208CD0E400F45DA2 /* Text View */ = {
-			isa = PBXGroup;
-			children = (
-				A57EE3E1208CD0E400F45DA2 /* ToolbarTextView.swift */,
-			);
-			path = "Text View";
-			sourceTree = "<group>";
-		};
-		A57EE3E2208CD0E500F45DA2 /* Public Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				A57EE3E3208CD0E500F45DA2 /* TextInputsProtocols.swift */,
-			);
-			path = "Public Protocols";
 			sourceTree = "<group>";
 		};
 		A57EE3E4208CD0E500F45DA2 /* Resources */ = {
@@ -107,36 +158,6 @@
 				A57EE3E5208CD0E500F45DA2 /* Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		A57EE3E6208CD0E500F45DA2 /* Text Field */ = {
-			isa = PBXGroup;
-			children = (
-				A57EE3E7208CD0E500F45DA2 /* DatePickerField.swift */,
-				A57EE3E8208CD0E500F45DA2 /* Text Field Accessory View */,
-				A57EE3EA208CD0E500F45DA2 /* PickerViewField.swift */,
-				A57EE3EB208CD0E500F45DA2 /* PassTextField.swift */,
-				A57EE3EC208CD0E500F45DA2 /* EmailTextField.swift */,
-				A57EE3ED208CD0E500F45DA2 /* Base */,
-			);
-			path = "Text Field";
-			sourceTree = "<group>";
-		};
-		A57EE3E8208CD0E500F45DA2 /* Text Field Accessory View */ = {
-			isa = PBXGroup;
-			children = (
-				A57EE3E9208CD0E500F45DA2 /* TextFieldAccessoryView.swift */,
-			);
-			path = "Text Field Accessory View";
-			sourceTree = "<group>";
-		};
-		A57EE3ED208CD0E500F45DA2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				A57EE3EE208CD0E500F45DA2 /* BaseTextField.swift */,
-				A57EE3EF208CD0E500F45DA2 /* ToolbarTextField.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +203,7 @@
 				TargetAttributes = {
 					A57EE3D4208CD0B200F45DA2 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -217,15 +239,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57EE3F3208CD0E500F45DA2 /* DatePickerField.swift in Sources */,
-				A57EE3F0208CD0E500F45DA2 /* ToolbarTextView.swift in Sources */,
-				A57EE3F8208CD0E500F45DA2 /* BaseTextField.swift in Sources */,
-				A57EE3F7208CD0E500F45DA2 /* EmailTextField.swift in Sources */,
-				A57EE3F9208CD0E500F45DA2 /* ToolbarTextField.swift in Sources */,
-				A57EE3F6208CD0E500F45DA2 /* PassTextField.swift in Sources */,
-				A57EE3F1208CD0E500F45DA2 /* TextInputsProtocols.swift in Sources */,
-				A57EE3F5208CD0E500F45DA2 /* PickerViewField.swift in Sources */,
-				A57EE3F4208CD0E500F45DA2 /* TextFieldAccessoryView.swift in Sources */,
+				A52B988F2148E06500491FA3 /* DatePickerField.swift in Sources */,
+				A52B98902148E06500491FA3 /* PickerViewField.swift in Sources */,
+				A52B98932148E06500491FA3 /* BaseTextField.swift in Sources */,
+				A52B98952148E06500491FA3 /* ToolbarTextView.swift in Sources */,
+				A52B98972148E06500491FA3 /* PickerViewFieldReloadable.swift in Sources */,
+				A52B98982148E06500491FA3 /* DateSelectionHandlerSettable.swift in Sources */,
+				A52B988E2148E06500491FA3 /* Constants.swift in Sources */,
+				A52B988C2148E06500491FA3 /* UIPickerView.swift in Sources */,
+				A52B988A2148E06500491FA3 /* UIBarButtonItem.swift in Sources */,
+				A52B98942148E06500491FA3 /* ToolbarTextField.swift in Sources */,
+				A52B98922148E06500491FA3 /* EmailTextField.swift in Sources */,
+				A52B988B2148E06500491FA3 /* UIDatePicker.swift in Sources */,
+				A52B98962148E06500491FA3 /* DoneButtonHandlerSettable.swift in Sources */,
+				A52B98912148E06500491FA3 /* PassTextField.swift in Sources */,
+				A52B98992148E06500491FA3 /* DoneTitleSettable.swift in Sources */,
+				A52B988D2148E06500491FA3 /* UIToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +384,7 @@
 		A57EE3DE208CD0B200F45DA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -372,6 +402,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sk.TextInputs;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -380,6 +411,7 @@
 		A57EE3DF208CD0B200F45DA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
