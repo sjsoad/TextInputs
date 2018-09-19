@@ -34,11 +34,7 @@ open class ToolbarTextView: UITextView, DoneTitleSettable, DoneButtonHandlerSett
     // MARK: - Actions -
     
     @objc private func doneButtonPressed(_ sender: UIBarButtonItem) {
-        #if swift(>=4.2)
         NotificationCenter.default.post(name: UITextView.textDidEndEditingNotification, object: self)
-        #else
-        NotificationCenter.default.post(name: .UITextViewTextDidEndEditing, object: self)
-        #endif
         doneButtonHandler?(self, sender)
     }
 }
